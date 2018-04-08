@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>antd-project</title>
+  </head>
+  <style lang="less">
+    body{
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script>
+     setTimeout(function () {
+        changeHeightAndWidth();
+      }, 20);
+      window.onresize = () => {
+        changeHeightAndWidth();
+      }
+      const changeHeightAndWidth = () => {
+         document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
+         document.getElementsByTagName('body')[0].style.width = window.innerWidth + 'px';
+      }
+  </script>
+</html>
